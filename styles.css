@@ -170,20 +170,21 @@ h3 {
   border-color: var(--accent);
   color: var(--accent-inverse);
 }
-.identity-card {
+.profile-photo-wrap {
   width: 210px;
   height: 210px;
-  display: grid;
-  place-items: center;
-  border: 1px solid var(--border);
   border-radius: 50%;
-  background: linear-gradient(145deg, #fafafa, #eeeeef);
+  overflow: hidden;
+  border: 1px solid var(--border);
   box-shadow: var(--shadow);
+  background: #f3f3f3;
 }
-.initials {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 4rem;
-  letter-spacing: -0.08em;
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
 } /* ========================================================== Section header ========================================================== */
 .section-heading-row {
   display: flex;
@@ -349,14 +350,11 @@ h3 {
   .hero-grid {
     grid-template-columns: 1fr;
   }
-  .identity-card {
+  .profile-photo-wrap {
     width: 145px;
     height: 145px;
     grid-row: 1;
     margin-bottom: -25px;
-  }
-  .initials {
-    font-size: 2.9rem;
   }
   .project-feature {
     grid-template-columns: 1fr;
